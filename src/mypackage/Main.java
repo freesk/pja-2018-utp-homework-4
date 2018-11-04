@@ -19,22 +19,22 @@ public class Main {
 			System.out.println(e.getMessage());
 		}
 		
-//		for (Person p : arr)
-//			System.out.println(p);
-//		
-//		sortedByFirstName = PersonDatabase.sortedByFirstName(arr);
-//		
-//		System.out.println("");
-//		
-//		for (Person p : sortedByFirstName)
-//			System.out.println(p);
-//
-//		sortedByBirthdate = PersonDatabase.sortedByBirthdate(arr);
-//		
-//		System.out.println("");
-//		
-//		for (Person p : sortedByBirthdate)
-//			System.out.println(p);
+		for (Person p : arr)
+			System.out.println(p);
+		
+		sortedByFirstName = PersonDatabase.sortedByFirstName(arr);
+		
+		System.out.println("");
+		
+		for (Person p : sortedByFirstName)
+			System.out.println(p);
+
+		sortedByBirthdate = PersonDatabase.sortedByBirthdate(arr);
+		
+		System.out.println("");
+		
+		for (Person p : sortedByBirthdate)
+			System.out.println(p);
 		
 		sortedBySurnameFirstNameAndBirthdate = PersonDatabase.sortedBySurnameFirstNameAndBirthdate(arr);
 				

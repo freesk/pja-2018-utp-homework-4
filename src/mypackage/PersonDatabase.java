@@ -1,5 +1,6 @@
 package mypackage;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -27,8 +28,9 @@ public final class PersonDatabase {
 			        r = p1.getBirthDate().compareTo(p2.getBirthDate());
 			    return r;
 		};
-		list.sort(comp);
-		return list;
+		List<Person> res = new ArrayList<Person>(list);
+		res.sort(comp);
+		return res;
 	}
 	
 //	Ignore these please
@@ -48,15 +50,16 @@ public final class PersonDatabase {
 //		Comparator <Person> lastNameComparator = (p1, p2) -> {
 //			return p1.getLastName().compareTo(p2.getLastName());
 //		};
-//		List<Comparator<Person>> comparators = Arrays.asList (
+//		List<Comparator<Person>> comparators = Arrays.asList(
 //				lastNameComparator,
 //				new FirstNameComparator(),
 //				new BirthdateComparator()
 //		);
+//		List<Person> res = new ArrayList<Person>(list);
 //		for (Comparator<? super Person> comparator : comparators) {
-//		    list.sort(comparator);
+//		    res.sort(comparator);
 //		}
-//		return list;
+//		return res;
 //	}
 	
 	public static List<Person> sortedByBirthdate(List<Person> list) {		

@@ -93,6 +93,53 @@ public class PersonDatabaseTest {
 	@Test
 	public void sortedBySurnameFirstNameAndBirthdate() {
 		
+//		dateThree is before dateOne
+		
+		p1 = new Person("A", "B", dateOne);
+		p2 = new Person("A", "B", dateTwo);
+		p3 = new Person("A", "B", dateThree);
+		
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		
+		List<Person> res = PersonDatabase.sortedBySurnameFirstNameAndBirthdate(list);
+		
+		Assert.assertEquals(p3, res.get(0));
+		Assert.assertEquals(p2, res.get(1));
+		Assert.assertEquals(p1, res.get(2));
+		
+		p1 = new Person("A", "B", dateOne);
+		p2 = new Person("A", "A", dateTwo);
+		p3 = new Person("A", "A", dateThree);
+		
+		list = new ArrayList<Person>();
+		
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		
+		res = PersonDatabase.sortedBySurnameFirstNameAndBirthdate(list);
+		
+		Assert.assertEquals(p3, res.get(0));
+		Assert.assertEquals(p2, res.get(1));
+		Assert.assertEquals(p1, res.get(2));
+		
+		p1 = new Person("A", "B", dateThree);
+		p2 = new Person("A", "A", dateTwo);
+		p3 = new Person("A", "B", dateOne);
+		
+		list = new ArrayList<Person>();
+		
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		
+		res = PersonDatabase.sortedBySurnameFirstNameAndBirthdate(list);
+		
+		Assert.assertEquals(p2, res.get(0));
+		Assert.assertEquals(p1, res.get(1));
+		Assert.assertEquals(p3, res.get(2));
 	}
 
 }
