@@ -68,7 +68,7 @@ public final class PersonDatabase {
 	}
 	
 	// Sorry, not quite sure what you mean by this https://www.screencast.com/t/LKPrN9AQiN9
-	public List<Person> bornOnDay(Date date, List<Person> list) {
+	public static List<Person> bornOnDay(Date date, List<Person> list) {
 		List<Person> res = list.stream()
 				.filter(p -> p.getBirthDate().compareTo(date) == 0)
 				.collect(Collectors.toList());
