@@ -36,7 +36,7 @@ public class Main {
 //		for (Person p : sortedByBirthdate)
 //			System.out.println(p);
 		
-		sortedBySurnameFirstNameAndBirthdate = PersonDatabase.sortedBySurnameFirstNameAndBirthdate2(arr);
+		sortedBySurnameFirstNameAndBirthdate = PersonDatabase.sortedBySurnameFirstNameAndBirthdate(arr);
 				
 		System.out.println("");
 				
